@@ -10,7 +10,7 @@ import iconReact from '@icons/React.svg';
 import iconVite from '@icons/Vite.svg';
 
 function Language({ language }) {
-  console.log(language)
+  // console.log(language)
   return (
     <motion.div
       className='flex flex-col justify-center items-center w-1/4 hover:scale-110'
