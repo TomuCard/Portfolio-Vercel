@@ -18,7 +18,7 @@ function Image({ props }) {
     <section className="flex items-center justify-center h-screen relative snap-start" id='projets'>
       <div ref={ref} className="w-[20vw] h-fit bg-neutral-200 overflow-hidden mx-5 rounded-lg">
         <img
-          src={`./src/assets/screen/${props[0]}.png`}
+          src={props[3]}
           alt={`${props[0]} screen Projet`}
           className="w-full h-full"
         />
