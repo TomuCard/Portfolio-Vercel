@@ -15,8 +15,8 @@ function Image({ props }) {
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section className="flex items-center justify-center h-screen relative snap-start" id='projets'>
-      <div ref={ref} className="w-[20vw] h-fit bg-neutral-200 overflow-hidden mx-5 rounded-lg">
+    <section className="flex items-center justify-start h-screen relative overflow-hidden xl:w-2/3 xl:mx-auto" >
+      <div ref={ref} className="w-1/3 h-fit bg-neutral-200 overflow-hidden rounded-lg ml-6 xl:mx-auto">
         <img
           src={props[3]}
           alt={`${props[0]} screen Projet`}
@@ -27,21 +27,21 @@ function Image({ props }) {
         initial={{ visibility: "hidden" }}
         animate={{ visibility: "visible" }}
         style={{ y }}
-        className={`${props[2]} text-4xl font-bold absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2`}
+        className={`${props[2]} text-2xl md:text-4xl font-bold absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-1/7`}
       >{`#[${props[0]}]`}</motion.h2>
       <motion.h3
-        initial={{ x: 500, opacity: 0, visibility: "hidden" }}
+        initial={{ x: 100, opacity: 0, visibility: "hidden" }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         animate={{ visibility: "visible" }}
-        className={`${props[2]} text-2xl font-bold absolute top-[40%] left-3/4 transform -translate-x-1/2 -translate-y-1/2`}
+        className={`${props[2]} text-xl md:text-2xl font-bold absolute top-[60%] md:top-[30%] left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-4/5`}
       >{`#[Description]:`}</motion.h3>
       <motion.p
-        initial={{ x: 500, opacity: 0, visibility: "hidden" }}
+        initial={{ x: 100, opacity: 0, visibility: "hidden" }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         animate={{ visibility: "visible" }}
-        className="text-neutral-200 text-base absolute top-[60%] left-3/4 transform -translate-x-1/2 -translate-y-1/2"
+        className="text-neutral-200 text-base absolute top-[85%] md:top-1/2 md:w-3/5 left-1/2 md:left-2/3 w-full px-6 transform -translate-x-1/2 -translate-y-1/2 xl:left-6/7 xl:h-auto xl:w-1/3"
       >{`${props[1]}`}</motion.p>
     </section>
   );
@@ -56,8 +56,8 @@ export default function Parallax() {
   ]
   return (
     <>
-      <h2 className='text-3xl text-white m-auto w-fit mt-50'>Mes Projets:</h2>
-      <div id="projets" className="snap-y snap-mandatory">
+      <h2 className='text-3xl text-white m-auto w-fit'>Mes Projets:</h2>
+      <div id="projets" className="overflow-hidden">
         {projets.map((array, index) => (
           <Image key={index} props={array} />
         ))}

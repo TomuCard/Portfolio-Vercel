@@ -41,7 +41,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
 
   return (
-    <div className="text-[8vw] whitespace-nowrap felx flex-nowrap m-0 overflow-hidden font-bold text-stroke leading-none">
+    <div className="text-[20vw] md:text-[10vw] whitespace-nowrap felx flex-nowrap m-0 overflow-hidden font-bold text-stroke leading-none select-none">
       <motion.div className="scroller" style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
@@ -54,7 +54,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function TextAnimation() {
   return (
-    <section className='absolute mt-40 w-screen h-screen -z-10 flex flex-col justify-end items-center gap-0 '>
+    <section className='md:mt-40 w-screen -z-10 flex flex-col justify-end items-center gap-0 overflow-hidden'>
       <ParallaxText baseVelocity={-0.5}>WEB FRONTEND DESIGN  BACKEND FRAMEWORK SITE USER</ParallaxText>
       <ParallaxText baseVelocity={0.5}>REACT.JS CSS PHP VITE.JS HTML DOCKER JAVASCRIPT TAILWIND PYTHON</ParallaxText>
     </section>

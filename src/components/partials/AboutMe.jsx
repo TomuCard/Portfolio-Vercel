@@ -28,31 +28,32 @@ function Language({ language }) {
 
 export default function AboutMe() {
   return (
-    <div className='h-[80vh] w-2/3 m-auto text-white py-28' id='about'>
-      <div className='flex justify-between h-full'>
+    <div className='w-full lg:w-2/3 xl:w-3/4 m-auto text-white px-6 py-24 md:py-28 overflow-hidden' id='about'>
+      <div className='flex flex-col xl:flex-row xl:gap-6 justify-between h-full'>
         <motion.img 
-          initial={{ x: -500, opacity: 0 }} 
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: -300, opacity: 0, display: "hidden"}} 
+          whileInView={{ x: 0, opacity: 1, display: "block"}}
           transition={{ duration: 1 }}
-          src="#" 
+          src="/src/assets/Photo Cool 2.jpg" 
           alt="Photo Tom Cardonnel" 
-          className="w-1/3 h-full bg-neutral-800 border-none rounded-xl"
+          className="w-full md:w-2/3 md:mx-auto xl:w-1/2 xl:m-0 h-fit bg-neutral-800 border-none rounded-xl overflow-hidden"
         />
 
-        <div className='w-1/2'>
+        <div className='w-full xl:w-2/3 overflow-hidden'>
           <motion.h2 
-            className='text-3xl mb-9'
-            initial={{ y: -100, opacity: 0 }} 
-            whileInView={{ y: 0, opacity: 1 }}
+            className='text-3xl'
+            initial={{ y: -100, opacity: 0, visibility: "hidden" }} 
+            whileInView={{ y: 0, opacity: 1, visibility: "visible" }}
             transition={{ duration: 0.5 }}
           >
             À Propos de moi:
           </motion.h2>
 
           <motion.p
-            initial={{ x: 500, opacity: 0 }} 
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: 300, opacity: 0, visibility: "hidden" }} 
+            whileInView={{ x: 0, opacity: 1, visibility: "visible"}}
             transition={{ duration: 0.5 }}
+            className='overflow-hidden md:w-full'
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ducimus distinctio alias sit assumenda quod tempora architecto quibusdam corrupti eos dolor aut accusantium ullam, odio cum. Est asperiores odio accusamus?
             Voluptate, eveniet numquam dolorem sint nostrum tempore itaque eligendi at tenetur quidem laborum in repudiandae modi? Fugit minus beatae dolorum tempore consequuntur dolore. Impedit eum nihil aperiam corporis qui nesciunt.

@@ -5,9 +5,13 @@
   --font-h1: 'Hanuman', 'serif';
 }
 
+html, body {
+  /* overflow-x: hidden; */
+  max-width: 100vw;
+}
+
 body {
   background-color: #171717;
-  overflow-x: hidden;
 }
 
 .text-stroke {

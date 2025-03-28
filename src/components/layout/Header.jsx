@@ -27,22 +27,27 @@ export default function Header(props) {
   return (
     <div className="w-screen flex justify-center">
       <header className={`
-          h-[5vh] bg-neutral-800 p-3 flex justify-between
+          h-[5vh] p-3 bg-neutral-800 flex justify-between
           transition-[width,border-radius] duration-300 z-10
           ${isScrolled 
-            ? 'fixed top-6 rounded-xl w-1/4 left-1/2 -translate-x-1/2 px-6' 
-            : 'relative w-screen px-24'
+            ? 'fixed top-6 rounded-xl w-2/3 left-1/2 -translate-x-1/2 pl-6' 
+            : 'relative w-screen px-12'
           }
         `}
       >
         <div className='relative flex items-center justify-between w-full'>
-          <div className='flex gap-3'>
-          <a href='#' className='cursor-pointer'><img src={iconHome}  /></a>
-          <a href='#about' className='cursor-pointer'><img src={iconAbout}  /></a>
-          <a href='#projets' className='cursor-pointer'><img src={iconProjets}  /></a>
-          <a href='#contact' className='cursor-pointer'><img src={iconContact}  /></a>
+          <div className='flex gap-[15%] sm:gap-6 w-full mr-3'>
+          <a href='#' className='cursor-pointer'><img src={iconHome} className='w-6' /></a>
+          <a href='#about' className='cursor-pointer'><img src={iconAbout} className='w-6' /></a>
+          <a href='#projets' className='cursor-pointer'><img src={iconProjets} className='w-6' /></a>
+          <a href='#contact' className='cursor-pointer'><img src={iconContact} className='w-6' /></a>
           </div>
-          <a className='text-white border-2 px-8 p-1 rounded-full cursor-pointer' href={"#"}>Mon CV</a>
+          <a className={`dark:text-white border-2 p-1 whitespace-nowrap rounded-full cursor-pointer w-fit
+            ${isScrolled
+              ? 'px-3 text-sm'
+              : 'px-8'
+            }
+            `} href={"#"}>Mon CV</a>
         </div>
       </header>
     </div>
