@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@layout/Header';
 import Footer from '@layout/Footer';
 import TextAnimation from '@partials/TextAnimation.jsx';
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import AboutMe from "@partials/AboutMe.jsx";
 import Projets from "@partials/Projets.jsx";
 import Contact from '@partials/Contact.jsx';
