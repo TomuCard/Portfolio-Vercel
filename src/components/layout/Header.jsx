@@ -30,8 +30,8 @@ export default function Header(props) {
           h-[5vh] p-3 bg-neutral-800 flex justify-between
           transition-[width,border-radius] duration-300 z-10
           ${isScrolled 
-            ? 'fixed top-6 rounded-xl w-2/3 left-1/2 -translate-x-1/2 pl-6' 
-            : 'relative w-screen px-12'
+            ? 'fixed top-6 rounded-xl w-2/3 xl:w-1/3 left-1/2 -translate-x-1/2 pl-6' 
+            : 'relative w-screen px-12 xl:px-24'
           }
         `}
       >
@@ -44,7 +44,7 @@ export default function Header(props) {
           </div>
           <a className={`dark:text-white border-2 p-1 whitespace-nowrap rounded-full cursor-pointer w-fit
             ${isScrolled
-              ? 'px-3 text-sm'
+              ? 'px-3 text-sm xl:text-base xl:px-8'
               : 'px-8'
             }
             `} href={"#"}>Mon CV</a>

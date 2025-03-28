@@ -40,13 +40,13 @@ export default function AboutMe() {
   return (
     <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-3 items-center text-white w-2/3 m-auto mb-12 mt-24 overflow-hidden' id='contact'>
     <motion.h2 
-      className='mb-12 text-3xl'
+      className='mb-12 text-3xl xl:w-1/3'
       initial={{ y: -100, opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >Me contacter:</motion.h2>
       <motion.div 
-        className='relative w-full lg:w-2/3'
+        className='relative w-full lg:w-2/3 xl:w-1/3'
         initial={{ x: -200, opacity: 0 }} 
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ export default function AboutMe() {
         <input type="text" name="name" className='border-neutral-400 focus:border-neutral-200 border-2 rounded-lg px-3 py-3 focus:outline-none w-full overflow-hidden' required />
       </motion.div>
       <motion.div 
-        className='relative w-full lg:w-2/3'
+        className='relative w-full lg:w-2/3 xl:w-1/3'
         initial={{ x: 100, opacity: 0 }} 
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ export default function AboutMe() {
         <input type="text" name="email" className='border-neutral-400 focus:border-neutral-200 border-2 rounded-lg px-3 py-3 focus:outline-none w-full overflow-hidden' required />
       </motion.div>
       <motion.div 
-        className='relative w-full lg:w-2/3'
+        className='relative w-full lg:w-2/3 xl:w-1/3'
         initial={{ x: -200, opacity: 0 }} 
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -73,7 +73,7 @@ export default function AboutMe() {
         <input type="text" name="title" className='border-neutral-400 focus:border-neutral-200 border-2 rounded-lg px-3 py-3 focus:outline-none w-full overflow-hidden' required />
       </motion.div>
       <motion.div 
-        className='relative w-full lg:w-2/3'
+        className='relative w-full lg:w-2/3 xl:w-1/3'
         initial={{ x: 100, opacity: 0 }} 
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -86,16 +86,15 @@ export default function AboutMe() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <ReCAPTCHA 
-          sitekey="6Lc1AwIrAAAAAJyTwRTtS2RfYdNdfp--Egp4NMqj" 
-          onChange={handleRecaptcha}
-          className=''
-        />
+      <ReCAPTCHA 
+        sitekey="6Lc1AwIrAAAAAJyTwRTtS2RfYdNdfp--Egp4NMqj" 
+        onChange={handleRecaptcha}
+      />
       </motion.div>
       <motion.input 
         type="submit" 
         value="Send" 
-        className='w-2/3 border-neutral-200 border-2 rounded-lg px-3 py-3 cursor-pointer'
+        className='w-2/3 border-neutral-200 border-2 rounded-lg px-3 py-3 cursor-pointer xl:w-1/3'
         initial={{ y: 50, opacity: 0 }} 
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }} 

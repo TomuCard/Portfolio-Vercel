@@ -34,7 +34,7 @@ function Image({ props }) {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         animate={{ visibility: "visible" }}
-        className={`${props[2]} text-xl md:text-2xl font-bold absolute top-[60%] md:top-[30%] left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-4/5`}
+        className={`${props[2]} text-xl md:text-2xl font-bold absolute top-[60%] md:top-[30%] xl:top-[20%] left-3/5 transform -translate-x-1/2 -translate-y-1/2 xl:left-4/5`}
       >{`#[Description]:`}</motion.h3>
       <motion.p
         initial={{ x: 100, opacity: 0, visibility: "hidden" }}
