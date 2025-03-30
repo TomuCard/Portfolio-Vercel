@@ -35,7 +35,7 @@ export default function AboutMe() {
           initial={{ x: -300, opacity: 0, display: "hidden"}} 
           whileInView={{ x: 0, opacity: 1, display: "block"}}
           transition={{ duration: 1 }}
-          src={myPicture} 
+          src={myPicture}
           alt="Photo Tom Cardonnel" 
           className="w-full md:w-2/3 md:mx-auto xl:w-1/2 xl:m-0 h-fit bg-neutral-800 border-none rounded-xl overflow-hidden"
         />
