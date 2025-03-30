@@ -3,7 +3,7 @@ import iconHome from '@assets/icons/home.svg'
 import iconAbout from '@assets/icons/person.svg'
 import iconProjets from '@assets/icons/files.svg'
 import iconContact from '@assets/icons/mail.svg'
-// import CV from '@assets/cv.pdf'
+import CVTomCardonnel from '@assets/CV.pdf'
 
 export default function Header(props) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +47,7 @@ export default function Header(props) {
               ? 'px-3 text-sm xl:text-base xl:px-8'
               : 'px-8'
             }
-            `} href={"#"}>Mon CV</a>
+            `} href={CVTomCardonnel}>Mon CV</a>
         </div>
       </header>
     </div>

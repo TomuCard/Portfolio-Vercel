@@ -14,12 +14,14 @@ function Image({ props }) {
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
 
+  const [title, description, textColor, image] = props;
+
   return (
     <section className="flex items-center justify-start h-screen relative overflow-hidden xl:w-2/3 xl:mx-auto" >
       <div ref={ref} className="w-1/3 h-fit bg-neutral-200 overflow-hidden rounded-lg ml-6 xl:mx-auto">
         <img
-          src={props[3]}
-          alt={`${props[0]} screen Projet`}
+          src={image}
+          alt={`${title} screen Projet`}
           className="w-full h-full"
         />
       </div>
@@ -27,22 +29,22 @@ function Image({ props }) {
         initial={{ visibility: "hidden" }}
         animate={{ visibility: "visible" }}
         style={{ y }}
-        className={`${props[2]} text-2xl md:text-4xl font-bold absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-1/7`}
-      >{`#[${props[0]}]`}</motion.h2>
+        className={`${textColor} text-2xl md:text-4xl font-bold absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-1/7`}
+      >{`#[${title}]`}</motion.h2>
       <motion.h3
         initial={{ x: 100, opacity: 0, visibility: "hidden" }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         animate={{ visibility: "visible" }}
-        className={`${props[2]} text-xl md:text-2xl font-bold absolute top-[60%] md:top-[30%] xl:top-[20%] left-3/5 transform -translate-x-1/2 -translate-y-1/2 xl:left-4/5`}
+        className={`${textColor} text-xl md:text-2xl font-bold absolute top-[60%] md:top-[30%] xl:top-[20%] left-3/5 transform -translate-x-1/2 -translate-y-1/2 xl:left-4/5`}
       >{`#[Description]:`}</motion.h3>
       <motion.p
         initial={{ x: 100, opacity: 0, visibility: "hidden" }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         animate={{ visibility: "visible" }}
-        className="text-neutral-200 text-base absolute top-[85%] md:top-1/2 md:w-3/5 left-1/2 md:left-2/3 w-full px-6 transform -translate-x-1/2 -translate-y-1/2 xl:left-6/7 xl:h-auto xl:w-1/3"
-      >{`${props[1]}`}</motion.p>
+        className="text-neutral-200 text-base absolute top-[85%] md:top-1/2 md:w-3/5 left-1/2 md:left-2/3 w-full px-6 transform -translate-x-1/2 -translate-y-1/2 xl:left-6/7 xl:h-auto xl:w-2/7"
+      >{`${description}`}</motion.p>
     </section>
   );
 }

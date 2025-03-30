@@ -30,21 +30,21 @@ function Language({ language }) {
 export default function AboutMe() {
   return (
     <div className='w-full lg:w-2/3 xl:w-3/4 m-auto text-white px-6 py-24 md:py-28 overflow-hidden' id='about'>
-      <div className='flex flex-col xl:flex-row xl:gap-6 justify-between h-full'>
+      <div className='flex flex-col xl:flex-row xl:gap-12 justify-between h-full'>
         <motion.img 
           initial={{ x: -300, opacity: 0, display: "hidden"}} 
           whileInView={{ x: 0, opacity: 1, display: "block"}}
           transition={{ duration: 1 }}
           src={myPicture}
           alt="Photo Tom Cardonnel" 
-          className="w-full md:w-2/3 md:mx-auto xl:w-1/2 xl:m-0 h-fit bg-neutral-800 border-none rounded-xl overflow-hidden"
+          className="w-full md:w-2/3 md:mx-auto xl:w-1/3 xl:m-0 h-fit bg-neutral-800 border-none rounded-xl overflow-hidden"
         />
 
-        <div className='w-full xl:w-2/3 overflow-hidden'>
+        <div className='w-full xl:w-2/3'>
           <motion.h2 
-            className='text-3xl'
-            initial={{ y: -100, opacity: 0, visibility: "hidden" }} 
-            whileInView={{ y: 0, opacity: 1, visibility: "visible" }}
+            className='text-3xl mt-12 mb-6' 
+            initial={{ y: -100, opacity: 0 }} 
+            whileInView={{ y: 0, opacity: 1 }} 
             transition={{ duration: 0.5 }}
           >
             À Propos de moi:
@@ -56,14 +56,19 @@ export default function AboutMe() {
             transition={{ duration: 0.5 }}
             className='overflow-hidden md:w-full'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ducimus distinctio alias sit assumenda quod tempora architecto quibusdam corrupti eos dolor aut accusantium ullam, odio cum. Est asperiores odio accusamus?
-            Voluptate, eveniet numquam dolorem sint nostrum tempore itaque eligendi at tenetur quidem laborum in repudiandae modi? Fugit minus beatae dolorum tempore consequuntur dolore. Impedit eum nihil aperiam corporis qui nesciunt.
-            Repellat expedita cupiditate qui laboriosam repudiandae et, fugiat vero nemo iste cum? Alias quasi quae ipsa a velit officiis ad labore nulla praesentium totam ipsam, fuga cumque debitis reiciendis qui!
-            Veniam perspiciatis tempore quod voluptates, harum labore cupiditate incidunt quam quo et fugit ipsa eligendi eum voluptatum. Eligendi et quod quas? Temporibus recusandae qui at aliquam debitis, dolores excepturi quis?
+            Je m'appelle <span className='font-bold'>Tom Cardonnel</span>, j'ai 21 ans et je suis actuellement en formation à <span className='font-bold'>Epitech</span>. Passionné par l'informatique sous toutes ses formes, j'aime autant comprendre le fonctionnement du <span className='font-bold'>hardware</span> que suivre les dernières avancées en <span className='font-bold'>software</span> et en intelligence artificielle. <span className='font-bold'>Autodidacte et passionné</span>, j’aime explorer de nouvelles technologies et relever des défis techniques, surtout lorsque ceux-ci me poussent à sortir de ma zone de confort.<br /><br />
+            Toujours motivé par l’apprentissage, je prends plaisir à concevoir des solutions créatives et efficaces. Ce portfolio regroupe mes réalisations et témoigne de mon engagement dans le développement web.
           </motion.p>
 
           <div className='my-6 h-1/2'>
-            <h2 className='text-xl'>Mes langages :</h2>
+            <motion.h2 
+              initial={{ y: -100, opacity: 0 }} 
+              whileInView={{ y: 0, opacity: 1 }} 
+              transition={{ duration: 0.5 }}
+              className='text-xl'
+            >
+              Mes langages :
+            </motion.h2>
             <motion.div 
               id='languages'
               className='flex mt-6 flex-wrap col-4 gap-y-6'
