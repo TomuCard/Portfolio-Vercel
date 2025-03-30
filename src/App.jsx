@@ -26,6 +26,7 @@ export default function App()
       <AboutMe />
       <Projets />
       <Contact />
+      <Footer />
     </>
   )
 }
