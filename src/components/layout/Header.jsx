@@ -37,12 +37,12 @@ export default function Header(props) {
       >
         <div className='relative flex items-center justify-between w-full'>
           <div className='flex gap-[15%] sm:gap-6 w-full mr-3'>
-          <a href='#' className='cursor-pointer scale-110'><img src={iconHome} className='w-6' /></a>
-          <a href='#about' className='cursor-pointer scale-110'><img src={iconAbout} className='w-6' /></a>
-          <a href='#projets' className='cursor-pointer scale-110'><img src={iconProjets} className='w-6' /></a>
-          <a href='#contact' className='cursor-pointer scale-110'><img src={iconContact} className='w-6' /></a>
+          <a href='#' className='cursor-pointer'><img src={iconHome} className='w-6 hover:scale-120' /></a>
+          <a href='#about' className='cursor-pointer'><img src={iconAbout} className='w-6 hover:scale-120' /></a>
+          <a href='#projets' className='cursor-pointer'><img src={iconProjets} className='w-6 hover:scale-120' /></a>
+          <a href='#contact' className='cursor-pointer'><img src={iconContact} className='w-6 hover:scale-120' /></a>
           </div>
-          <a className={`dark:text-white border-2 p-1 whitespace-nowrap rounded-full cursor-pointer w-fit
+          <a className={`dark:text-white border-2 p-1 whitespace-nowrap rounded-full cursor-pointer w-fit hover:scale-105
             ${isScrolled
               ? 'px-3 text-sm xl:text-base xl:px-8'
               : 'px-8'

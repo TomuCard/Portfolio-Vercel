@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import iconHTML from '@icons/HTML.svg';
-import iconCSS from '@icons/CSS.svg';
-import iconSass from '@icons/Sass.svg';
+// import iconHTML from '@icons/HTML.svg';
+// import iconCSS from '@icons/CSS.svg';
+// import iconSass from '@icons/Sass.svg';
+import iconNext from '@icons/Next.svg';
+import iconNode from '@icons/Node.svg';
+import iconPython from '@icons/Python.svg';
 import iconJavaScript from '@icons/JavaScript.svg';
 import iconPHP from '@icons/PHP.svg';
 import iconTailwindCSS from '@icons/TailwindCSS.svg';
@@ -79,7 +82,8 @@ export default function AboutMe() {
                 visible: { transition: { staggerChildren: 0.1 } }
               }}
             >
-              {[[iconHTML, "HTML"], [iconCSS, "CSS"], [iconTailwindCSS,"TailwindCSS"], [iconSass, "Sass"], [iconJavaScript, "JavaScript"], [iconReact, "React.js"], [iconVite, "Vite.js"], [iconPHP, "PHP"]]
+              {/* {[[iconHTML, "HTML"], [iconCSS, "CSS"], [iconTailwindCSS,"TailwindCSS"], [iconSass, "Sass"], [iconJavaScript, "JavaScript"], [iconReact, "React.js"], [iconVite, "Vite.js"], [iconPHP, "PHP"]] */}
+              {[[iconJavaScript, "JavaScript"], [iconReact, "React.js"], [iconTailwindCSS, "TailwindCSS"], [iconVite, "Vite.js"], [iconNext, 'Next.js'], [iconPHP, "PHP"], [iconNode, "Node.js"], [iconPython, "Python"]]
               .map((language, index) => (
                 <Language key={index} language={language} />
               ))}
