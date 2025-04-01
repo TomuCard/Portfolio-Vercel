@@ -47,7 +47,10 @@ export default function Header(props) {
               ? 'px-3 text-sm xl:text-base xl:px-8'
               : 'px-8'
             }
-            `} href={CVTomCardonnel}>Mon CV</a>
+            `} 
+            href={CVTomCardonnel}
+            target='_blank'
+          >Mon CV</a>
         </div>
       </header>
     </div>

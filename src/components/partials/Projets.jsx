@@ -27,6 +27,7 @@ function Image({ props }) {
       </div>
       <motion.a
         href={url}
+        target='_blank'
         initial={{ visibility: "hidden" }}
         animate={{ visibility: "visible" }}
         style={{ y }}
