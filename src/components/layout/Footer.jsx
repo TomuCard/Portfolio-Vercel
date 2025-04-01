@@ -5,7 +5,7 @@ import iconLinkedin from '@icons/linkedin.svg';
 export default function Footer() {
   return (
     <footer className='w-full h-16 bg-neutral-800 flex items-center justify-around px-3'>
-      <h1 className='text-neutral-600 h-fit w-fit'>© Tout droits réservés - tomu.cardonnel@gmail.com</h1>
+      <h1 className='text-neutral-600 h-fit w-fit'>© Tous droits réservés - tomu.cardonnel@gmail.com</h1>
       <div className='flex gap-4'>
         <a href="https://github.com/TomuCard" target='_blank'>
           <img src={iconGithub} alt="icon Github" className='w-8' />  

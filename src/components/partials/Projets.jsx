@@ -14,7 +14,7 @@ function Image({ props }) {
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
 
-  const [title, description, textColor, image] = props;
+  const [title, description, textColor, image, url] = props;
 
   return (
     <section className="flex items-center justify-start h-screen relative overflow-hidden xl:w-2/3 xl:mx-auto" >
@@ -25,12 +25,13 @@ function Image({ props }) {
           className="w-full h-full"
         />
       </div>
-      <motion.h2
+      <motion.a
+        href={url}
         initial={{ visibility: "hidden" }}
         animate={{ visibility: "visible" }}
         style={{ y }}
-        className={`${textColor} text-2xl md:text-4xl font-bold absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 xl:left-1/7`}
-      >{`#[${title}]`}</motion.h2>
+        className={`${textColor} text-2xl md:text-4xl font-bold absolute top-1/2 left-3/4 transform -translate-x-1/2 underline cursor-pointer -translate-y-1/2 xl:left-1/7`}
+      >{`#[${title}]`}</motion.a>
       <motion.h3
         initial={{ x: 100, opacity: 0, visibility: "hidden" }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -51,10 +52,10 @@ function Image({ props }) {
 
 export default function Parallax() {
   const projets = [
-    ['Realty', "Realty est un site web que j’ai développé pour une entreprise spécialisée dans la location d’appartements de luxe à Paris. Le site propose une double interface : une vue dédiée aux utilisateurs, pour consulter et réserver des appartements haut de gamme, ainsi qu’une vue réservée aux gérants, pour gérer les biens et les réservations. Des services de conciergerie et prestations de luxe sont également proposés aux clients pour une expérience premium. J’ai travaillé sur ce projet en tant que développeur fullstack, en prenant en charge à la fois la partie frontend et backend.", 'text-[#ffd800]', screenRealty], 
-    ['Mangalaxy', "Mangalaxy est un site web que j’ai réalisé dans le cadre d’un projet. Il permet aux utilisateurs d’acheter des mangas, qu’ils soient neufs ou d’occasion. J’ai également ajouté des fonctionnalités permettant aux utilisateurs de laisser des commentaires et des notes sur les mangas, ce qui enrichit l’expérience d'achat et aide les autres à faire leur choix. J’ai travaillé sur ce projet en tant que développeur frontend, en m’assurant que l'interface soit fluide et intuitive, tout en mettant en valeur les différentes collections disponibles sur le site.", "text-[#ff4747]", screenMangalaxy], 
-    ['1Twitter2Plus', '1Twitter2Plus est un réseau social que j’ai développé en fullstack. Les utilisateurs peuvent publier des messages, suivre d’autres membres et interagir avec leurs posts. J’ai également intégré une intelligence artificielle qui répond à toutes leurs questions, ce qui apporte une dimension originale et interactive à la plateforme. Ce projet m’a permis de travailler sur l’ensemble de la stack, aussi bien côté frontend que backend, et d’explorer l’intégration d’une IA au service des utilisateurs.', 'text-[#1d9bf0]', screen1Twitter2Plus], 
-    ['Connectify', 'Connectify est un réseau social que j’ai développé, pensé pour les étudiants d’un même établissement. L’objectif est de faciliter les échanges entre eux, que ce soit pour discuter, partager des infos ou élargir leur réseau. J’ai travaillé sur ce projet en tant que fullstack, en mettant en place des fonctionnalités comme la recherche d’utilisateurs par promo, ce qui permet de retrouver facilement ses camarades ou de faire de nouvelles rencontres au sein de l’école. Ce projet m’a permis de renforcer mes compétences en développement web et en gestion de bases de données.', 'text-[#3e7a0c]', screenConnectify]
+    ['Realty', "Realty est un site web que j’ai développé pour une entreprise spécialisée dans la location d’appartements de luxe à Paris. Le site propose une double interface : une vue dédiée aux utilisateurs, pour consulter et réserver des appartements haut de gamme, ainsi qu’une vue réservée aux gérants, pour gérer les biens et les réservations. Des services de conciergerie et prestations de luxe sont également proposés aux clients pour une expérience premium. J’ai travaillé sur ce projet en tant que développeur fullstack, en prenant en charge à la fois la partie frontend et backend.", 'text-[#ffd800]', screenRealty, "https://github.com/TomuCard/Realty"], 
+    ['Mangalaxy', "Mangalaxy est un site web que j’ai réalisé dans le cadre d’un projet. Il permet aux utilisateurs d’acheter des mangas, qu’ils soient neufs ou d’occasion. J’ai également ajouté des fonctionnalités permettant aux utilisateurs de laisser des commentaires et des notes sur les mangas, ce qui enrichit l’expérience d'achat et aide les autres à faire leur choix. J’ai travaillé sur ce projet en tant que développeur frontend, en m’assurant que l'interface soit fluide et intuitive, tout en mettant en valeur les différentes collections disponibles sur le site.", "text-[#ff4747]", screenMangalaxy, "https://github.com/TomuCard"], 
+    ['1Twitter2Plus', '1Twitter2Plus est un réseau social que j’ai développé en fullstack. Les utilisateurs peuvent publier des messages, suivre d’autres membres et interagir avec leurs posts. J’ai également intégré une intelligence artificielle qui répond à toutes leurs questions, ce qui apporte une dimension originale et interactive à la plateforme. Ce projet m’a permis de travailler sur l’ensemble de la stack, aussi bien côté frontend que backend, et d’explorer l’intégration d’une IA au service des utilisateurs.', 'text-[#1d9bf0]', screen1Twitter2Plus, "https://github.com/TomuCard/1Twitter2Plus"], 
+    ['Connectify', 'Connectify est un réseau social que j’ai développé, pensé pour les étudiants d’un même établissement. L’objectif est de faciliter les échanges entre eux, que ce soit pour discuter, partager des infos ou élargir leur réseau. J’ai travaillé sur ce projet en tant que fullstack, en mettant en place des fonctionnalités comme la recherche d’utilisateurs par promo, ce qui permet de retrouver facilement ses camarades ou de faire de nouvelles rencontres au sein de l’école. Ce projet m’a permis de renforcer mes compétences en développement web et en gestion de bases de données.', 'text-[#3e7a0c]', screenConnectify, "https://github.com/TomuCard/Connectify"]
   ]
   return (
     <>
